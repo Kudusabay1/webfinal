@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="program.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bx-plus-circle.svg.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu page</title>
+    <style>
+    *,::after,::before{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      margin: 0 100px;
+      background-color: rgb(255, 183, 100);
+    }
+    .nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+      }
+    .nav .logo h1{
+      font-weight: 600;
+      font-family: sans-serif;
+      color: black;
+    }
+    .nav .logo b{
+      color: green;
+    }
+    .nav ul{
+      display: flex;
+      list-style: none;
+    }
+    .nav ul li{
+      margin-right: 30px;
+    }
+    .nav ul li a{
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      font-family: sans-serif;
+      font-size: 17px;
+    }
+    .nav ul .active::after{
+      content: '';
+      width: 50%;
+      height: 3px;
+      background-color: rgb(237, 121, 18);
+      display: flex;
+      position: relative;
+      margin-left: 10px;
+
+    }
+    input{
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: 600;
+
+    }
+    .signin{
+      background: transparent;
+      border: none;
+
+    }
+    .signup{
+      background-color: rgb(237, 121, 18);
+      color: #ffffffff;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+    }
+    .content{
+      display: grid;
+      grid-template-columns: 50% auto;
+      gap: 30px;
+      margin-top: 60px;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .content .content-left{
+      display: block;
+      width: 100%;
+    }
+    .content .content-left .info{
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .content .content-left .info h2{
+      font-size: 60px;
+      font-family: sans-serif;
+      margin-bottom: 30px;
+    }
+    .content .content-left .info p{
+      font-size: 20px;
+      line-height: 2pc;
+      margin-bottom: 30px;
+      font-family: sans-serif;
+    }
+    .content .content-right{
+      display: block;
+      width: 100%;
+    }
+    .content .content-right img{
+      width: 400px;
+      height: auto;
+      position: relative;
+      
+    }
+    .category{
+      width: 100%;
+      display: flex;
+      margin-bottom: 50px;
+      justify-content: center;
+    }
+    .category .list-items{
+      width: 90%;
+      position: relative;
+      margin-top: 50px;
+    }
+    .category .list-items h3{
+      font-size: 20px;
+      font-weight: 600;
+      font-family: sans-serif;
+      margin-bottom: 70px;
+    }
+    .category .list-items .card-list{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .category .card-list .card{
+      width: 200px;
+      height: auto;
+      display: block;
+      padding: 10px;
+      border-radius: 10px;
+      position: relative;
+      background: #ffffffff;
+      outline: 2px solid rgb(237, 121, 18);
+    }
+    .category .card-list .card .span{
+      width: 100px;
+      height: auto;
+      bottom: 130px;
+      left: 50px;
+      object-fit: cover;
+      object-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      box-shadow: 0 20px 20px rgb(255, 183, 100);
+      border-radius: 50%;
+    }
+    .category .card-list .card .food-title{
+      padding: 40px 0 10px;
+    }
+    .category .card-list .card .food-title h1{
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+      font-family: sans-serif;
+    }
+    .category .card .desc-food{
+      font-size: 13px;
+      text-align: center;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-family: sans-serif;
+    }
+    .category .card .price{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .category .card .price span .plus-icon{
+      font-size: 20px;
+      cursor: pointer;
+
+    }
+
+    </style>
+  </head>
+  <body>
+    <section class="menu">
+      <div class="nav">
+        <div class="logo"><h1>Lane<b>Dash</b></h1></div>
+          <ul>
+            <li><a class="active">Home</a></li>
+            <li><a href="#">Resturants</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Home</a></li>
+          </ul>
+          <div>
+            <input class="signin" type="submit" value="Sign In" name="signin">
+            <input class="signup" type="submit" value="Sign Up" name="signup">
+          </div>
+      </div>
+    </section>
+    <section class="grid">
+      <div class="content">
+        <div class="content-left">
+          <div class="info">
+            <h2>Welcome To <br>Popeyes</h2>
+            <p>Your presence in our restaurant makes us happy, adding to the great atmosphere. 
+              Thank you for choosing to dine with us!</p>
+          </div>
+        </div>
+        <div class="content-right">
+          <img src="Popeyes-Logo-Transparent.png" alt="">
+        </div>
+      </div>
+    </section>
+    <seection class="category">
+      <div class="list-items">
+        <h3>Menu</h3>
+        <div class="card-list">
+          <div class="card">
+            <img class="span" src="7fa8bce0-d4f6-462d-bbff-c0562e3438a2-retina-large.avif" alt="">
+            <div class="food-title">
+              <h1>Big Mac</h1>
+            </div>
+            <div class="desc-food">
+              <p>  .category .list-ite  .category .list-items .car</p>
+            </div>
+            <div class="price">
+              <span>$7.99</span><span><img class="plus-icon" src="media/bxs-plus-circle.svg" alt=""></span>
+            </div>
+          </div>
+          <div class="card">
+            <img class="span" src="screen-shot-2021-12-28-at-2-55-26-pm-1640721341.png" alt="">
+            <div class="food-title">
+              <h1>Fries</h1>
+            </div>
+            <div class="desc-food">
+              <p>  .category .list-ite  .category .list-items .car</p>
+            </div>
+            <div class="price">
+              <span>$7.99</span><span><img class="plus-icon" src="media/bxs-plus-circle.svg" alt=""></span>
+            </div>
+          </div>
+          <div class="card">
+            <img class="span" src="0fc1dea6-3318-484d-b8b5-ec45cb72a500-retina-large.avif" alt="">
+            <div class="food-title">
+              <h1>Drink</h1>
+            </div>
+            <div class="desc-food">
+              <p>  .category .list-ite  .category .list-items .car</p>
+            </div>
+            <div class="price">
+              <span>$7.99</span><span><img class="plus-icon" src="media/bxs-plus-circle.svg" alt=""></span>
+            </div>
+          </div>
+          <div class="card">
+            <img class="span" src="f11fc0d5-2b62-4b33-b082-4fe1728819e7-retina-large.avif" alt="">
+            <div class="food-title">
+              <h1>Big Mac Meal</h1>
+            </div>
+            <div class="desc-food">
+              <p>  .category .list-ite  .category .list-items .car</p>
+            </div>
+            <div class="price">
+              <span>$7.99</span><span><img class="plus-icon" src="media/bxs-plus-circle.svg" alt=""></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </seection>
+  </body>  
+
+</html>
