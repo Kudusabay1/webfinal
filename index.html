@@ -27,6 +27,64 @@
         position:absolute;
         text-align: center;
     }
+    .nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+      }
+    .nav .logo h1{
+      font-weight: 600;
+      font-family: sans-serif;
+      color: black;
+    }
+    .nav .logo b{
+      color: green;
+    }
+    .nav ul{
+      display: flex;
+      list-style: none;
+    }
+    .nav ul li{
+      margin-right: 30px;
+    }
+    .nav ul li a{
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      font-family: sans-serif;
+      font-size: 17px;
+    }
+    .nav ul .active::after{
+      content: '';
+      width: 50%;
+      height: 3px;
+      background-color: rgb(231, 73, 73);
+      display: flex;
+      position: relative;
+      margin-left: 10px;
+
+    }
+    input{
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: 600;
+
+    }
+    .signin{
+      background: transparent;
+      border: none;
+
+    }
+    .signup{
+      background-color: rgb(35, 145, 31);
+      color: #ffffffff;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+    }
+
         </style>
 
         <!--CSS END-->
@@ -39,24 +97,24 @@
     <!--start of nav-->
     <div class="container-fluid">
         <div class="row">
-            <nav class="navbar navbar-expand-lg bg-dark">
-            <a class="navbar-brand text-light" href="index.html">LaneDash</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="food.html">Food</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="cart.html">Cart</a>
-                    </li>
-                    </ul>
-                    <span class="navbar-text">
-                        <img src="..."  alt="">
-                    </span>
+                <!--start of nav-->
+    <section class="menu">
+        <div class="nav">
+          <div class="logo"><h1>Lane<b>Dash</b></h1></div>
+            <ul>
+              <li><a class="active">Home</a></li>
+              <li><a href="#">Resturants</a></li>
+              <li><a href="#">Cart</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Home</a></li>
+            </ul>
+            <div>
+              <input class="signin" type="submit" value="Sign In" name="signin">
+              <input class="signup" type="submit" value="Sign Up" name="signup">
             </div>
+        </div>
+      </section>
+    <!--end of nav-->
             </nav>
         </div>
     </div>
