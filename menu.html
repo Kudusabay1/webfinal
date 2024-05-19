@@ -5,8 +5,9 @@
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bx-plus-circle.svg.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu page</title>
     <style>
     *,::after,::before{
@@ -117,12 +118,13 @@
     .category{
       width: 100%;
       display: flex;
+      margin-bottom: 50px;
       justify-content: center;
     }
     .category .list-items{
       width: 90%;
       position: relative;
-      margin-top: 100px;
+      margin-top: 50px;
     }
     .category .list-items h3{
       font-size: 20px;
@@ -144,21 +146,45 @@
       background: #ffffffff;
       outline: 2px solid orange;
     }
-    .category .card-list .card img{
+    .category .card-list .card .span{
       width: 100px;
       height: auto;
-      bottom: 140px;
+      bottom: 130px;
       left: 50px;
       object-fit: cover;
       object-position: center;
       background-repeat: no-repeat;
       position: absolute;
-      box-shadow: 0 20px 20px orange;
+      box-shadow: 0 20px 20px rgb(244, 244, 151);
       border-radius: 50%;
     }
     .category .card-list .card .food-title{
       padding: 40px 0 10px;
     }
+    .category .card-list .card .food-title h1{
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+      font-family: sans-serif;
+    }
+    .category .card .desc-food{
+      font-size: 13px;
+      text-align: center;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-family: sans-serif;
+    }
+    .category .card .price{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .category .card .price span .plus-icon{
+      font-size: 20px;
+      cursor: pointer;
+
+    }
+
     </style>
   </head>
   <body>
@@ -197,15 +223,51 @@
         <h3>Menu</h3>
         <div class="card-list">
           <div class="card">
-            <img src="mcdonald-s-logo-on-transparent-white-background-free-vector.jpg" alt="">
+            <img class="span" src="400x400_Big_Mac.webp" alt="">
             <div class="food-title">
               <h1>Big Mac</h1>
             </div>
             <div class="desc-food">
-              <p>  .category .list-items .card-list{  .category .list-items .car</p>
+              <p>  .category .list-ite  .category .list-items .car</p>
             </div>
             <div class="price">
-              <span>$7.99</span><span><img src="" alt=""></span>
+              <span>$7.99</span><span><img class="plus-icon" src="media/bxs-plus-circle.svg" alt=""></span>
+            </div>
+          </div>
+          <div class="card">
+            <img class="span" src="DC_202002_6053_LargeFries_832x472_nutrition-calculator-tile.jpeg" alt="">
+            <div class="food-title">
+              <h1>Fries</h1>
+            </div>
+            <div class="desc-food">
+              <p>  .category .list-ite  .category .list-items .car</p>
+            </div>
+            <div class="price">
+              <span>$7.99</span><span><img class="plus-icon" src="media/bxs-plus-circle.svg" alt=""></span>
+            </div>
+          </div>
+          <div class="card">
+            <img class="span" src="DC_202112_0521_MediumCoke_Glass_832x472_nutrition-calculator-tile.jpeg" alt="">
+            <div class="food-title">
+              <h1>Drink</h1>
+            </div>
+            <div class="desc-food">
+              <p>  .category .list-ite  .category .list-items .car</p>
+            </div>
+            <div class="price">
+              <span>$7.99</span><span><img class="plus-icon" src="media/bxs-plus-circle.svg" alt=""></span>
+            </div>
+          </div>
+          <div class="card">
+            <img class="span" src="Header_BigMacCombo_v1_832x472_nutrition-calculator-tile (1).jpeg" alt="">
+            <div class="food-title">
+              <h1>Big Mac Meal</h1>
+            </div>
+            <div class="desc-food">
+              <p>  .category .list-ite  .category .list-items .car</p>
+            </div>
+            <div class="price">
+              <span>$7.99</span><span><img class="plus-icon" src="media/bxs-plus-circle.svg" alt=""></span>
             </div>
           </div>
         </div>
