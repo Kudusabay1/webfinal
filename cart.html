@@ -1,26 +1,36 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <script src="program.js"></script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Generics | Store</title>
+        <meta name="description" content="This is the description">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css" />
+        <script src="program.js" async></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .footer{
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-         background-color: black;
-        color: white;
-        text-align: center;
-        }
-        .icon{
-            width: 30px;
-        }
-    .nav{
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("Fonts/Booter - Zero Zero.woff") format("woff"),
+         url("Fonts/Booter - Zero Zero.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Raleway;
+    color: #777;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+.nav{
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -33,7 +43,7 @@
       color: black;
     }
     .nav .logo b{
-      color: green;
+      color: rgb(35, 145, 31);
     }
     .nav ul{
       display: flex;
@@ -68,7 +78,7 @@
     .signin{
       background: transparent;
       border: none;
-      color: black;
+
     }
     .signup{
       background-color: rgb(35, 145, 31);
@@ -78,12 +88,230 @@
       border-radius: 5px;
     }
 
-            </style>
-    
-            <!--CSS END-->
-    <title>Cart page</title>
-  </head>
-  <body>
+.content-section {
+    margin: 1em;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+.section-header {
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid rgb(35, 145, 31);
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-play {
+    display: block;
+    margin: 0 auto;
+    color: rgb(35, 145, 31);
+    font-size: 4em;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    text-align: center;
+}
+
+.btn-primary {
+    color: white;
+    background-color: rgb(35, 145, 31);
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.tour-row {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.tour-row:last-child {
+    border: none;
+}
+
+.tour-item {
+    display: inline-block;
+    padding-right: .5em;
+}
+
+.tour-date {
+    color: #555;
+    width: 11%;
+    font-weight: bold;
+}
+
+.tour-city {
+    width: 24%;
+}
+
+.tour-arena {
+    width: 42%;
+}
+
+.tour-btn {
+    max-width: 19%;
+}
+
+.shop-item {
+    margin: 30px;
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    height: 250px;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    color: #333;
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid rgb(35, 145, 31);
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+        </style>
+    </head>
+    <body>
     <!--start of nav-->
     <div class="container-fluid">
         <div class="row">
@@ -97,61 +325,166 @@
                         <li><a href="cart.html">About Us</a></li>
                     </ul>
                     <div>
-                    <a href="signup.html"><input class="signin" type="submit" value="Sign In" name="signin"></a>
+                    <a href="signin.html"><input class="signin" type="submit" value="Sign In" name="signin"></a>
                     <a href="signup.html"><input class="signup" type="submit" value="Sign Up" name="signup"></a>
                     </div>
                 </div>
             </section>
             </nav>
         </div>
-    </div>
+      </div>
     <!--end of nav-->
-    <h1>Lanedash</h1>
- <!--start of footer-->
- <br>
-    <footer class="bg-dark">
-        <div class="container text-center">
-         <div class="row text-light">
-             <div class="col-lg-6">
-             <div class="pr-xl-4">
-                 <br>
-                 <p class="rights">Designed by Kudus, Tyrus, Benny, and Nathan</p>
-             </div>
-             </div>
-             <div class="col-lg-6">
-             <div class="pr-xl-4">
-                 <br>
-                 <p class="rights"><span>© </span><span class="copyright-year">May @2024</span><span></span><span> Company</span><span> - </span><span>All Rights Reserved.</span></p>
-             </div>
-             </div>
-         </div>
-         <div class="row">
-             <div class="col-lg-3 text-light">
-             <div class="pr-xl-4">
-                 <p class="rights">Emails: kkabay@cps.edu, bdorantes3@cps.edu, tcdrisdel@cps.edu, ncharpentie@cps.edu</p>
-             </div>
-             </div>
-             <div class="col-lg-3 text-light">
-                 <div class="pr-xl-4">
-                     <p class="rights">Phone: 773-987-1634</p>
-                 </div>
-             </div>
-             <div class="col-lg-6 text-light">
-                 <div class="pr-xl-4">
-                     <img class="icon" src="media/5296499_fb_facebook_facebook logo_icon (1).png" alt="">
-                     <img class="icon" src="media/3225191_app_instagram_logo_media_popular_icon (1).png" alt="">
-                     <img class="icon" src="media/5296514_bird_tweet_twitter_twitter logo_icon (1).png" alt="">
-                     <img class="icon" src="media/4362957_snapchat_logo_social media_icon (1).png" alt="">
-                 </div>
-             </div>
-         </div>
-        </div> 
-    </footer>
- <!--end of footer-->
- <div class="cart-item">
-  
-  <div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <section class="container content-section">
+            <h2 class="section-header">Mcdonalds</h2>
+            <div class="shop-items">
+                <div class="col-lg-3">
+                    <div class="shop-item">
+                        <span class="shop-item-title">Big Mac</span>
+                        <img class="shop-item-image" src="media/400x400_Big_Mac.webp" alt="">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">$5.99</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="shop-item">
+                        <span class="shop-item-title">Fries</span>
+                        <img class="shop-item-image" src="media/DC_202002_6053_LargeFries_832x472_nutrition-calculator-tile.jpeg" alt="">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">$3.99</span>
+                            <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="shop-item">
+                        <span class="shop-item-title">Drink</span>
+                        <img class="shop-item-image" src="media/DC_202112_0521_MediumCoke_Glass_832x472_nutrition-calculator-tile.jpeg" alt="">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">$2.99</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="shop-item">
+                        <span class="shop-item-title">Big Mac Meal</span>
+                        <img class="shop-item-image" src="media/Header_BigMacCombo_v1_832x472_nutrition-calculator-tile (1).jpeg" alt="">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">$11.99</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">Wingstop</h2>
+            <div class="shop-items">
+                <div class="col-lg-3">
+                    <div class="shop-item">
+                        <span class="shop-item-title">Wings</span>
+                        <img class="shop-item-image" src="media/wingstop-flavors (1).jpg" alt="">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">$11.99</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="shop-item">
+                        <span class="shop-item-title">Fries</span>
+                        <img class="shop-item-image" src="media/04f40558-1562-49b9-8bf7-808a0ab0d2e6-retina-large.avif" alt="">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">$3.99</span>
+                            <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="shop-item">
+                        <span class="shop-item-title">Drink</span>
+                        <img class="shop-item-image" src="media/images (2).jpeg" alt="">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">$2.99</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="shop-item">
+                        <span class="shop-item-title">Wings Meal</span>
+                        <img class="shop-item-image" src="media/929ef6d6-0a95-4725-a421-bf047349450c-retina-large.avif" alt="">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">$16.99</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">Popeyes</h2>
+            <div class="shop-items">
+                <div class="col-lg-3">
+                    <div class="shop-item">
+                        <span class="shop-item-title">Chicken Sandwich</span>
+                        <img class="shop-item-image" src=src="media/7fa8bce0-d4f6-462d-bbff-c0562e3438a2-retina-large.avif" alt="">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">$4.99</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="shop-item">
+                        <span class="shop-item-title">Fries</span>
+                        <img class="shop-item-image" src="media/screen-shot-2021-12-28-at-2-55-26-pm-1640721341.png" alt="">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">$3.99</span>
+                            <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="shop-item">
+                        <span class="shop-item-title">Drink</span>
+                        <img class="shop-item-image" src="media/0fc1dea6-3318-484d-b8b5-ec45cb72a500-retina-large.avif" alt="">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">$2.99</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="shop-item">
+                        <span class="shop-item-title">Sandwich Meal</span>
+                        <img class="shop-item-image" src="media/f11fc0d5-2b62-4b33-b082-4fe1728819e7-retina-large.avif" alt="">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">$10.99</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-  </body>
+    </body>
 </html>
