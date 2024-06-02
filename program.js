@@ -94,7 +94,19 @@ function updateCartTotal() {
         total = total + (price * quantity)
 
     }
+    for (var i = 0; i < cartRows.length; i++) {
+        var cartRow = cartRows[i]
+        var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+        var price = parseFloat(priceElement.innerText.replace('$', ''))
+        var quantity = quantityElement.value
+        var tax= total*0.07
+        total= tax+total
+
+    }
+    tax = Math.round(tax*100)/100
+    document.getElementsByClassName('cart-tax-price')[0].innerText = '$' + tax
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
-    document.getElementsByClassName('cart-tax-price')[0].innerText = '$' + tax
+  
 }
